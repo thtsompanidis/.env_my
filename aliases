@@ -1,0 +1,44 @@
+#My aliases
+
+#-- edit env --
+alias aliases='vi ~/.my_env/aliases'
+alias bash='vi ~/.my_env/bash'
+alias src='source ~/.bash_profile'
+
+#-- commands --
+alias grep='grep --color=auto'
+alias lsa='ls -alG'
+alias lsl='ls -l'
+alias vi='vim'
+alias his='history | grep -i '
+alias envg='env | grep -i '
+
+#-- cd --
+alias dev='cd ~/dev'
+alias temp='cd ~/temp'
+
+#-- Git --
+alias gstatus='git status'
+alias gpull='git pull'
+alias gcheckout='git checkout'
+alias gbranchl='git branch -a'
+alias gadd='git add'
+alias gdiff='git diff'
+alias gcommit='git commit'
+alias gcleanbranches='git branch --merged master | grep -v master | xargs git branch -d'
+alias gdiffv='git difftool --tool=vimdiff'
+
+#-- Docker --
+alias logs='docker-compose logs -f'
+alias docker-kill-all='docker kill $(docker ps -q)'
+alias docker-delete-all='docker rm $(docker ps -qa)'
+alias docker-login='$(aws --region us-east-1 ecr get-login --no-include-email)'
+
+#-- Kubernetes --
+alias kube="kubectl"
+alias k-n='f() { kubectl config set-context $(kubectl config current-context) --namespace=$1; unset -f f; }; f'
+alias k-pods='kubectl get pod'
+
+#-- prompt --
+alias pr='source set_pr'
+alias prkube='source set_pr kube'
