@@ -25,22 +25,13 @@ function parse_git_branch {
       git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-function set_pr {
-    if [ $# -eq 0 ]
-    then
-        export PS1="\! \[\033[01;32m\]\t \[\033[01;35m\]\u@mac\[\033[01;34m\]:\$(parse_git_branch) \[\033[01;32m\]\w \[\033[01;34m\]\n>\[\e[0m\]"
-    elif [ $1 == "kube" ]
-    then
-        source ~/.kube-ps1.sh
-        export PS1="\! \[\033[01;32m\]\t \[\033[01;35m\]\u@mac\[\033[01;34m\]:\$(kube_ps1)\[\033[01;32m\]\w \[\033[01;34m\]\n>\[\e[0m\]"
-    fi
-}
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+export PS1="\! \$(kube_ps1)\[\033[01;32m\]\t \[\033[01;35m\]\u@mac\[\033[01;34m\]:\$(parse_git_branch) \[\033[01;32m\]\w \[\033[01;34m\]\n>\[\e[0m\]"
 
 function ecr-login() { eval $(aws --region us-east-1 ecr get-login --no-include-email);}
 function aws-start-session() { eval $( mfa-start-session $@); }
 function aws-assume-role() { eval $( assume-role $@); }
 
 source ~/.env_my/aliases
-source ~/.env_my/bash
 source ~/.env_my/vars
 

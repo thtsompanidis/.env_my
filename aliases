@@ -1,8 +1,10 @@
 #My aliases
 
+alias rm='rm -i'
+
 #-- edit env --
-alias aliases='vi ~/.my_env/aliases'
-alias bash='vi ~/.my_env/bash'
+alias aliases='vi ~/.env_my/aliases'
+alias bash='vi ~/.env_my/bash'
 alias src='source ~/.bash_profile'
 
 #-- commands --
