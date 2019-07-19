@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-#  [[ -d "$HOME/bin" ]] && export PATH="$HOME/bin:$PATH";
+  [[ -d "$HOME/bin" ]] && export PATH="$HOME/bin:$PATH";
 
 # autocompletion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
@@ -10,7 +10,7 @@ function parse_git_branch {
 }
 
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
- export PS1="\$(kube_ps1) \[\033[01;34m\]\$(parse_git_branch) \[\033[01;32m\]\w \[\e[0m\]--- \[\033[01;35m\]\u@mac \[\033[01;32m\]\t \[\e[0m\]\!\[\033[01;34m\]\n>\[\e[0m\]"
+ export PS1="\$(kube_ps1) \[\033[01;34m\]\$(parse_git_branch) \[\e[39m \e[46m\w\[\e[0m\] --- \[\033[01;35m\]\u@mac \[\033[01;32m\]\t \[\e[0m\]\!\[\033[01;34m\]\n>\[\e[0m\]"
 
 function aws-start-session() { eval $( mfa-start-session $@); }
 function aws-assume-role() { eval $( assume-role $@); }

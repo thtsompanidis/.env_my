@@ -47,6 +47,9 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 # Install pr kube utility from https://github.com/jonmosco/kube-ps1
 brew install kube-ps1
 
+# Install mfa-seesion utilities
+git clone git@github.com:mozilla-platform-ops/aws_mfa_scripts.git ~/bin
+
 # Load my environment
 echo "source ~/.env_my/bash" >> ~/.bash_profile
 source ~/.bash_profile
