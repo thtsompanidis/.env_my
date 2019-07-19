@@ -2,7 +2,7 @@
 
 alias rm='rm -i'
 
-#-- edit env --
+#-- env_my --
 alias aliases='vi ~/.env_my/aliases'
 alias bash='vi ~/.env_my/bash'
 alias src='source ~/.bash_profile'
@@ -34,13 +34,8 @@ alias gdiffv='git difftool --tool=vimdiff'
 alias logs='docker-compose logs -f'
 alias docker-kill-all='docker kill $(docker ps -q)'
 alias docker-delete-all='docker rm $(docker ps -qa)'
-alias docker-login='$(aws --region us-east-1 ecr get-login --no-include-email)'
 
 #-- Kubernetes --
 alias kube="kubectl"
 alias k-n='f() { kubectl config set-context $(kubectl config current-context) --namespace=$1; unset -f f; }; f'
 alias k-pods='kubectl get pod'
-
-#-- prompt --
-alias pr='source set_pr'
-alias prkube='source set_pr kube'

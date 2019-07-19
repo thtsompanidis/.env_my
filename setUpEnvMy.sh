@@ -1,11 +1,11 @@
 # Install brew
-# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Make sure system is ready to brew
 brew doctor
 
-# Brew Install basic dev tools 
-#brew install git nodenv yarn jq awscli kubernetes-cli kops remind101/formulae/assume-role terraform
+# Brew Install basic dev tools
+brew install git nodenv yarn jq awscli kubernetes-cli kops remind101/formulae/assume-role terraform bash-completion
 
 echo "================================================================"
 echo "=============  Manage node version with 'nodenv'  =============="
@@ -23,7 +23,6 @@ echo "================================================================"
 # initialise nodenv
 echo 'eval "$(nodenv init -)"' >> ~/.bash_profile
 nodenv rehash
-source ~/.bash_profile
 
 # Print a list with other software the user might want to install
 echo " "
@@ -43,11 +42,11 @@ echo "================================================================"
 
 # Install an awsome version for vimrc from github.com/amix
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh 
+sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # Install pr kube utility from https://github.com/jonmosco/kube-ps1
 brew install kube-ps1
 
 # Load my environment
 echo "source ~/.env_my/bash" >> ~/.bash_profile
-source ~/bash_profile
+source ~/.bash_profile
