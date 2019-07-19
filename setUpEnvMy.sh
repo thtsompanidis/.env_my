@@ -5,7 +5,7 @@
 brew doctor
 
 # Brew Install basic dev tools
-brew install git nodenv yarn jq awscli kubernetes-cli kops remind101/formulae/assume-role terraform bash-completion
+brew install git nodenv yarn jq awscli kubernetes-cli kops remind101/formulae/assume-role terraform bash-completion aws-iam-authenticator
 
 echo "================================================================"
 echo "=============  Manage node version with 'nodenv'  =============="
