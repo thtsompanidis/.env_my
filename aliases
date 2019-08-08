@@ -6,6 +6,7 @@ alias rm='rm -i'
 alias aliases='vi ~/.env_my/aliases'
 alias bash='vi ~/.env_my/bash'
 alias src='source ~/.bash_profile'
+alias img='f() { ~/.env_my/imgcat.sh $1; unset -f f; }; f'
 
 #-- commands --
 alias grep='grep --color=auto'

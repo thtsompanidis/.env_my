@@ -5,7 +5,9 @@
 brew doctor
 
 # Brew Install basic dev tools
-brew install git nodenv yarn jq awscli kubernetes-cli kops remind101/formulae/assume-role terraform bash-completion aws-iam-authenticator
+brew install git nodenv yarn jq awscli kubernetes-cli kops remind101/formulae/assume-role terraform bash-completion aws-iam-authenticator watch terraform_landscape
+
+brew cask install gitup
 
 echo "================================================================"
 echo "=============  Manage node version with 'nodenv'  =============="
@@ -49,6 +51,9 @@ brew install kube-ps1
 
 # Install mfa-seesion utilities
 git clone git@github.com:mozilla-platform-ops/aws_mfa_scripts.git ~/bin
+
+# Get print img script for iterm
+curl https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/utilities/imgcat >> .env_my/imgcat.sh
 
 # Load my environment
 echo "source ~/.env_my/bash" >> ~/.bash_profile
