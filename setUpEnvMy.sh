@@ -5,7 +5,7 @@
 brew doctor
 
 # Brew Install basic dev tools
-brew install git nodenv yarn jq awscli kubernetes-cli kops remind101/formulae/assume-role terraform bash-completion aws-iam-authenticator watch terraform_landscape
+brew install git nodenv yarn jq awscli kubernetes-cli kops remind101/formulae/assume-role terraform bash-completion aws-iam-authenticator watch terraform_landscape kubernetes-helm sops octant
 
 brew cask install gitup
 

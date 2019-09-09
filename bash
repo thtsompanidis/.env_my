@@ -10,7 +10,7 @@ function parse_git_branch {
 }
 
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
- export PS1="\$(kube_ps1) \[\033[01;34m\]\$(parse_git_branch) \[\e[36m\w\[\e[0m\] --- \[\033[01;35m\]\u@mac \[\033[01;32m\]\t \[\e[0m\]\!\[\033[01;34m\]\n>\[\e[0m\]"
+ export PS1="\e[0m\$(kube_ps1) \[\033[01;34m\]\$(parse_git_branch) \e[46m\e[33m\W\e[49m \[\e[36m\w\[\e[0m\] --- \[\033[01;35m\]\u@mac \[\033[01;32m\]\t \[\e[0m\]\!\[\033[01;34m\]\n>\[\e[0m\]"
 
 function aws-start-session() { eval $( mfa-start-session $@); }
 function aws-assume-role() { eval $( assume-role $@); }
