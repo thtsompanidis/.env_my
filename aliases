@@ -35,6 +35,7 @@ alias gdiffv='git difftool --tool=vimdiff'
 alias logs='docker-compose logs -f'
 alias docker-kill-all='docker kill $(docker ps -q)'
 alias docker-delete-all='docker rm $(docker ps -qa)'
+alias docker-nuke='docker rm $(docker ps -aq); docker rmi $(docker images -aq)'
 
 #-- Kubernetes --
 alias kube="kubectl"
