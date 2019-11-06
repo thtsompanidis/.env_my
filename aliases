@@ -15,6 +15,7 @@ alias lsl='ls -l'
 alias vi='vim'
 alias his='history | grep -i '
 alias envg='env | grep -i '
+alias used='du -hs ./*'
 
 #-- cd --
 alias dev='cd ~/dev'
@@ -30,6 +31,7 @@ alias gdiff='git diff'
 alias gcommit='git commit'
 alias gcleanbranches='git branch --merged master | grep -v master | xargs git branch -d'
 alias gdiffv='git difftool --tool=vimdiff'
+alias glog='git log --pretty=oneline'
 
 #-- Docker --
 alias logs='docker-compose logs -f'
@@ -41,3 +43,4 @@ alias docker-nuke='docker rm $(docker ps -aq); docker rmi $(docker images -aq)'
 alias kube="kubectl"
 alias k-n='f() { kubectl config set-context $(kubectl config current-context) --namespace=$1; unset -f f; }; f'
 alias k-pods='kubectl get pod'
+alias kpod='kubectl get pods | grep '
