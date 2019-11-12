@@ -4,6 +4,9 @@
 # autocompletion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
+#set GOPATH 
+export GOPATH=$(which go)
+
 # set the prompt
 function parse_git_branch {
       git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'

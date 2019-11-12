@@ -20,6 +20,7 @@ alias used='du -hs ./*'
 #-- cd --
 alias dev='cd ~/dev'
 alias temp='cd ~/temp'
+alias envmy='cd ~/.env_my'
 
 #-- Git --
 alias gstatus='git status'
